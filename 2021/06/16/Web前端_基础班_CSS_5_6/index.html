@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Web前端,CSS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一.行高和字号12345line-height: 40px;font: 14px&#x2F;24px “宋体”;font-family: &quot;Times New Roman&quot;,&quot;微软雅黑&quot;,&quot;宋体&quot;;font:12px&#x2F;30px  &quot;Times New Roman&quot;,&quot;Microsoft YaHei&quot;,&amp;quo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web前端_CSS_5_6">
+<meta property="og:url" content="http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="一.行高和字号12345line-height: 40px;font: 14px&#x2F;24px “宋体”;font-family: &quot;Times New Roman&quot;,&quot;微软雅黑&quot;,&quot;宋体&quot;;font:12px&#x2F;30px  &quot;Times New Roman&quot;,&quot;Microsoft YaHei&quot;,&amp;quo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-16T04:22:07.000Z">
+<meta property="article:modified_time" content="2021-06-16T14:30:09.498Z">
+<meta property="article:author" content="MichaelRich">
+<meta property="article:tag" content="Web前端">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://georgeswift.github.io/2021/06/16/Web前端_基础班_CSS_5_6/"/>
+
+
+
+
+
+  <title>Web前端_CSS_5_6 | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Learn more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Web前端_CSS_5_6</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-16T12:22:07+08:00">
+                2021-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一-行高和字号"><a href="#一-行高和字号" class="headerlink" title="一.行高和字号"></a>一.行高和字号</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line"><span class="attribute">font</span>: <span class="number">14px</span>/<span class="number">24px</span> “宋体”;</span><br><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;Times New Roman&quot;</span>,<span class="string">&quot;微软雅黑&quot;</span>,<span class="string">&quot;宋体&quot;</span>;</span><br><span class="line"><span class="attribute">font</span>:<span class="number">12px</span>/<span class="number">30px</span>  <span class="string">&quot;Times New Roman&quot;</span>,<span class="string">&quot;Microsoft YaHei&quot;</span>,<span class="string">&quot;SimSun&quot;</span>;</span><br><span class="line"><span class="attribute">font</span>:<span class="number">12px</span>/<span class="number">200%</span> “宋体”</span><br></pre></td></tr></table></figure>
+
+<p><strong>页面中，中文我们只使用： 微软雅黑、宋体、黑体。 如果页面中，需要其他的字体，那么需要切图。</strong></p>
+<p><strong>英语：Arial 、 Times New Roman</strong></p>
+<h2 id="二-超级链接的美化"><a href="#二-超级链接的美化" class="headerlink" title="二.超级链接的美化"></a>二.超级链接的美化</h2><h3 id="1-伪类"><a href="#1-伪类" class="headerlink" title="1.伪类"></a>1.伪类</h3><p>但是a属于什么类？不明确。因为要看用户有没有点击、有没有触碰。所以，就叫做“伪类”。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这四种状态，在css中，必须按照固定的顺序写</p>
+<p>a标签涵盖了link、visited的状态</p>
+<h3 id="2-美化"><a href="#2-美化" class="headerlink" title="2.美化"></a>2.美化</h3><p>a标签在使用的时候，非常的难。因为不仅仅要控制a这个盒子，也要控制它的伪类。</p>
+<p>我们一定要将a标签写在前面，:link、:visited、:hover、:active这些伪类写在后面。</p>
+<p><strong>a标签中，描述盒子； 伪类中描述文字的样式、背景。</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">		*&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">width</span>: <span class="number">960px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>: <span class="number">1px</span> solid red;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin</span>: <span class="number">100px</span> auto;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span> <span class="selector-tag">ul</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="comment">/*去掉小圆点*/</span></span></span><br><span class="line"><span class="css">			<span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">			<span class="attribute">width</span>: <span class="number">120px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">			<span class="attribute">line-height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="css">			<span class="attribute">width</span>: <span class="number">120px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:link</span> , <span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>: purple;</span></span><br><span class="line"><span class="css">			<span class="attribute">color</span>:white;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>: orange;</span></span><br><span class="line"><span class="css">		&#125;</span></span><br><span class="line"><span class="css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>网站栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">text-decoration</span>: none;</span><br><span class="line">	<span class="attribute">background-color</span>: purple;</span><br><span class="line">	<span class="attribute">color</span>:white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>: orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简化版</p>
+<h2 id="三-background系列属性"><a href="#三-background系列属性" class="headerlink" title="三.background系列属性"></a>三.background系列属性</h2><h3 id="1-background-color"><a href="#1-background-color" class="headerlink" title="1 background-color"></a>1 background-color</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: red; </span><br><span class="line"><span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#ff0000</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-background-image"><a href="#2-background-image" class="headerlink" title="2 background-image"></a>2 background-image</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">images/wuyifan.jpg</span>);</span><br></pre></td></tr></table></figure>
+
+<p>背景天生是会被平铺满的。</p>
+<h3 id="3-background-repeat"><a href="#3-background-repeat" class="headerlink" title="3 background-repeat"></a>3 background-repeat</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>:no-repeat;  </span><br><span class="line"><span class="attribute">background-repeat</span>:repeat-x;   </span><br><span class="line"><span class="attribute">background-repeat</span>:repeat-y;  </span><br></pre></td></tr></table></figure>
+
+<h3 id="4-background-position"><a href="#4-background-position" class="headerlink" title="4 background-position"></a>4 background-position</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>:-<span class="number">10px</span>,-<span class="number">20px</span>;<span class="comment">/*向右移动量 向下移动量*/</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>css精灵</strong></p>
+<p>将小图标和背景图像合并到一张图片上，然后利用css的背景定位来显示需要显示的图片部分。减少了http请求。</p>
+<p>用fireworks精确控制精灵</p>
+<p>background-position: 描述左右的词儿  描述上下的词儿;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: right bottom;</span><br></pre></td></tr></table></figure>
+
+<p>拼名字</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">52px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">78px</span>;</span><br><span class="line">	<span class="attribute">background-position</span>: -<span class="number">134px</span> -<span class="number">198px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-background-attachment"><a href="#5-background-attachment" class="headerlink" title="5 background-attachment"></a>5 background-attachment</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>:fixed;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-background综合属性"><a href="#6-background综合属性" class="headerlink" title="6 background综合属性"></a>6 background综合属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>:red <span class="built_in">url</span>(<span class="string">1.jpg</span>) no-repeat <span class="number">100px</span> <span class="number">100px</span> fixed;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四-相对定位-day6"><a href="#四-相对定位-day6" class="headerlink" title="四.相对定位 day6"></a>四.相对定位 day6</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">position: relative;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-相对自己原来的位置进行位置调整"><a href="#1-相对自己原来的位置进行位置调整" class="headerlink" title="1.相对自己原来的位置进行位置调整"></a>1.相对自己原来的位置进行位置调整</h3><h3 id="2-不脱标，老家留坑，形影分离"><a href="#2-不脱标，老家留坑，形影分离" class="headerlink" title="2 不脱标，老家留坑，形影分离"></a>2 不脱标，老家留坑，形影分离</h3><h3 id="3-相对定位用途"><a href="#3-相对定位用途" class="headerlink" title="3 相对定位用途"></a>3 相对定位用途</h3><ol>
+<li> <strong>微调</strong>元素</li>
+<li>做绝对定位的参考，子绝父相</li>
+</ol>
+<h3 id="4-相对定位的定位值"><a href="#4-相对定位的定位值" class="headerlink" title="4.相对定位的定位值"></a>4.相对定位的定位值</h3><p>**right: 100px; ** <strong>向左移动</strong></p>
+<h2 id="五-绝对定位"><a href="#五-绝对定位" class="headerlink" title="五.绝对定位"></a>五.绝对定位</h2><h3 id="1-绝对定位脱标"><a href="#1-绝对定位脱标" class="headerlink" title="1 绝对定位脱标"></a>1 绝对定位脱标</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-参考点"><a href="#2-参考点" class="headerlink" title="2 参考点"></a>2 参考点</h3><ul>
+<li><strong>如果用top描述，那么定位参考点就是页面的左上角，而不是浏览器的左上角</strong></li>
+<li>**如果用 ** <strong>bottom描述，那么就是浏览器首屏窗口尺寸，对应的页面的左下角</strong></li>
+</ul>
+<h3 id="3-以盒子为参考点"><a href="#3-以盒子为参考点" class="headerlink" title="3 以盒子为参考点"></a>3 以盒子为参考点</h3><ul>
+<li>如果父辈元素中出现了也定位了的元素，那么将以父辈这个元素，为参考点</li>
+<li>要听最近的已经定位的祖先元素的，不一定是父亲，可能是爷爷</li>
+<li>工程上，“子绝父相”有意义，父亲没有脱标，儿子脱标在父亲的范围里面移动。</li>
+<li>绝对定位的儿子，无视参考的那个盒子的padding</li>
+</ul>
+<h3 id="4-绝对定位的盒子居中"><a href="#4-绝对定位的盒子居中" class="headerlink" title="4 绝对定位的盒子居中"></a>4 绝对定位的盒子居中</h3><ul>
+<li>margin:0 auto;失效</li>
+<li>left:50%; margin-left:负的宽度的一半</li>
+</ul>
+<h2 id="六-固定定位"><a href="#六-固定定位" class="headerlink" title="六.固定定位"></a>六.固定定位</h2><ul>
+<li>相对浏览器窗口定位。页面如何滚动，这个盒子显示的位置不变</li>
+<li>固定定位脱标</li>
+<li><strong>IE6不兼容</strong></li>
+</ul>
+<h2 id="七-z-index"><a href="#七-z-index" class="headerlink" title="七.z-index"></a>七.z-index</h2><ul>
+<li>z-index值表示谁压着谁。数值大的压盖住数值小的。</li>
+<li>只有定位了的元素，才能有z-index值。而浮动的东西不能用</li>
+<li> z-index值没有单位，就是一个正整数。默认的z-index值是0</li>
+<li>如果大家都没有z-index值，或者z-index值一样，那么谁写在HTML后面，谁在上面能压住别人。定位了的元素，永远能够压住没有定位的元素。</li>
+<li><strong>从父现象：父亲怂了，儿子再牛逼也没用。</strong>父亲大的在上面</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/">Web前端_CSS_5_6</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
+  <p><span>发布时间:</span>2021年06月16日 - 12:06</p>
+  <p><span>最后更新:</span>2021年06月16日 - 22:06</p>
+  <p><span>原始链接:</span><a href="/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/" title="Web前端_CSS_5_6">http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+          
+    </div>
+
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    MichaelRich
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/" title="Web前端_CSS_5_6">http://georgeswift.github.io/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_5_6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web%E5%89%8D%E7%AB%AF/" rel="tag"># Web前端</a>
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/16/Web%E5%89%8D%E7%AB%AF_%E5%9F%BA%E7%A1%80%E7%8F%AD_CSS_3_4/" rel="next" title="Web前端_CSS_3_4">
+                <i class="fa fa-chevron-left"></i> Web前端_CSS_3_4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/06/16/Fireworks%E7%9F%A5%E8%AF%86/" rel="prev" title="Fireworks知识">
+                Fireworks知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E8%A1%8C%E9%AB%98%E5%92%8C%E5%AD%97%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">一.行高和字号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5%E7%9A%84%E7%BE%8E%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">二.超级链接的美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BC%AA%E7%B1%BB"><span class="nav-number">2.1.</span> <span class="nav-text">1.伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BE%8E%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">2.美化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-background%E7%B3%BB%E5%88%97%E5%B1%9E%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">三.background系列属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-background-color"><span class="nav-number">3.1.</span> <span class="nav-text">1 background-color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-background-image"><span class="nav-number">3.2.</span> <span class="nav-text">2 background-image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-background-repeat"><span class="nav-number">3.3.</span> <span class="nav-text">3 background-repeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-background-position"><span class="nav-number">3.4.</span> <span class="nav-text">4 background-position</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-background-attachment"><span class="nav-number">4.</span> <span class="nav-text">5 background-attachment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-background%E7%BB%BC%E5%90%88%E5%B1%9E%E6%80%A7"><span class="nav-number">4.1.</span> <span class="nav-text">6 background综合属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D-day6"><span class="nav-number">5.</span> <span class="nav-text">四.相对定位 day6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%9B%B8%E5%AF%B9%E8%87%AA%E5%B7%B1%E5%8E%9F%E6%9D%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E8%BF%9B%E8%A1%8C%E4%BD%8D%E7%BD%AE%E8%B0%83%E6%95%B4"><span class="nav-number">5.1.</span> <span class="nav-text">1.相对自己原来的位置进行位置调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%8D%E8%84%B1%E6%A0%87%EF%BC%8C%E8%80%81%E5%AE%B6%E7%95%99%E5%9D%91%EF%BC%8C%E5%BD%A2%E5%BD%B1%E5%88%86%E7%A6%BB"><span class="nav-number">5.2.</span> <span class="nav-text">2 不脱标，老家留坑，形影分离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%94%A8%E9%80%94"><span class="nav-number">5.3.</span> <span class="nav-text">3 相对定位用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%AE%9A%E4%BD%8D%E5%80%BC"><span class="nav-number">5.4.</span> <span class="nav-text">4.相对定位的定位值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="nav-number">6.</span> <span class="nav-text">五.绝对定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E8%84%B1%E6%A0%87"><span class="nav-number">6.1.</span> <span class="nav-text">1 绝对定位脱标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8F%82%E8%80%83%E7%82%B9"><span class="nav-number">6.2.</span> <span class="nav-text">2 参考点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BB%A5%E7%9B%92%E5%AD%90%E4%B8%BA%E5%8F%82%E8%80%83%E7%82%B9"><span class="nav-number">6.3.</span> <span class="nav-text">3 以盒子为参考点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%9B%92%E5%AD%90%E5%B1%85%E4%B8%AD"><span class="nav-number">6.4.</span> <span class="nav-text">4 绝对定位的盒子居中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD-%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D"><span class="nav-number">7.</span> <span class="nav-text">六.固定定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83-z-index"><span class="nav-number">8.</span> <span class="nav-text">七.z-index</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">7.2k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>
